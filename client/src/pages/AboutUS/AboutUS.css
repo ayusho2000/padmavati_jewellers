@@ -1,0 +1,1150 @@
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-page {
+  background: #ffffff;
+  color: #262626;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+  min-height: 760px;
+
+  padding: 150px 8% 90px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 48%) minmax(0, 52%);
+
+  align-items: center;
+
+  background: #e4cdaf;
+
+  overflow: hidden;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+
+  padding-right: 50px;
+}
+
+.about-hero-content > span,
+.about-section-heading > span,
+.about-vision-content > span {
+  display: block;
+
+  color: #c79a3b;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.about-hero-content h1 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: var(--primary);
+
+  font-size: 76px;
+
+  font-weight: 600;
+
+  line-height: 1.02;
+
+  margin-bottom: 30px;
+}
+
+.about-hero-content h1 em,
+.about-story-content h2 em,
+.about-section-heading h2 em,
+.about-why-content h2 em,
+.about-awards h2 em,
+.about-vision-content h2 em {
+  font-style: normal;
+
+  color: var(--primary);
+}
+
+.about-hero-content p {
+  max-width: 580px;
+
+  color: #666;
+
+  font-size: 17px;
+
+  line-height: 2;
+}
+
+.about-hero-image {
+  width: 100%;
+  max-width: 760px;
+
+  height: auto;
+  aspect-ratio: 4 / 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  margin-left: auto;
+}
+
+.about-hero-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.about-hero-image:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   OUR STORY
+========================================= */
+
+.about-story {
+  padding: 100px 8%;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 48%) minmax(0, 52%);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.about-story-image {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+}
+
+.about-story-image img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.about-story-image:hover img {
+  transform: scale(1.04);
+}
+
+.about-story-content {
+  padding-right: 30px;
+}
+
+.about-kicker {
+  display: block;
+
+  color: #c79a3b;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.about-story-content h2,
+.about-why-content h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: var(--primary);
+
+  font-size: 62px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.about-story-content p,
+.about-why-content > p {
+  color: #666;
+
+  line-height: 2;
+
+  margin-bottom: 20px;
+
+  max-width: 650px;
+}
+
+
+/* =========================================
+   COMMON SECTION HEADING
+========================================= */
+
+.about-section-heading {
+  max-width: 850px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.about-section-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: var(--primary);
+
+  font-size: 62px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  margin-bottom: 22px;
+}
+
+.about-section-heading p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #666;
+
+  line-height: 1.9;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   JOURNEY
+========================================= */
+
+.about-journey {
+  padding: 100px 8%;
+
+  background: #f8f3ec;
+}
+
+.about-timeline {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.about-timeline-item {
+  position: relative;
+
+  padding: 35px 28px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  min-height: 270px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.about-timeline-item:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.about-year {
+  display: block;
+
+  color: #c79a3b;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 32px;
+
+  font-weight: 600;
+
+  margin-bottom: 20px;
+}
+
+.about-timeline-content h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: var(--primary);
+
+  font-size: 27px;
+
+  margin-bottom: 12px;
+}
+
+.about-timeline-content p {
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   TEAM
+========================================= */
+
+.about-team {
+  padding: 100px 8%;
+}
+
+.about-team-grid {
+  max-width: 1350px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 28px;
+}
+
+.about-team-card {
+  background: #f8f3ec;
+
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.about-team-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.about-team-image {
+  width: 100%;
+
+  aspect-ratio: 4 / 4.6;
+
+  overflow: hidden;
+}
+
+.about-team-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.about-team-card:hover .about-team-image img {
+  transform: scale(1.06);
+}
+
+.about-team-info {
+  padding: 28px;
+}
+
+.about-team-info h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: var(--primary);
+
+  font-size: 29px;
+
+  margin-bottom: 10px;
+}
+
+.about-team-info p {
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   WHY PADMAVATI
+========================================= */
+
+.about-why {
+  padding: 100px 8%;
+
+  background: #f8f3ec;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 48%) minmax(0, 52%);
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+.about-why-image {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+}
+
+.about-why-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.about-why-image:hover img {
+  transform: scale(1.04);
+}
+
+.about-why-content {
+  padding-right: 20px;
+}
+
+.about-values {
+  margin-top: 35px;
+}
+
+.about-value {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 22px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid rgba(95, 36, 27, 0.12);
+}
+
+.about-value > span {
+  color: #c79a3b;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+
+  min-width: 35px;
+}
+
+.about-value h3 {
+  color: var(--primary);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+
+  margin-bottom: 5px;
+}
+
+.about-value p {
+  color: #777;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   AWARDS
+========================================= */
+
+.about-awards {
+  padding: 100px 8%;
+}
+
+.about-awards-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 25px;
+}
+
+.about-award-card {
+  padding: 45px 35px;
+
+  border: 1px solid rgba(95, 36, 27, 0.14);
+
+  border-radius: 20px;
+
+  transition:
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.about-award-card:hover {
+  background: #f8f3ec;
+
+  transform: translateY(-6px);
+}
+
+.about-award-card strong {
+  color: #c79a3b;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 30px;
+
+  font-weight: 500;
+}
+
+.about-award-card h3 {
+  color: var(--primary);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 31px;
+
+  margin: 20px 0 10px;
+}
+
+.about-award-card p {
+  color: #777;
+
+  line-height: 1.8;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   VISION
+========================================= */
+
+.about-vision {
+  padding: 100px 8%;
+
+  background: #ecd7bd;;
+
+  color: #ffffff;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 55%) minmax(0, 45%);
+
+  align-items: center;
+
+  gap: 60px;
+
+  overflow: hidden;
+}
+
+.about-vision-content {
+  max-width: 720px;
+}
+
+.about-vision-content > span {
+  color: #bc9029;
+
+  /* font-size: 15px; */
+
+  font-weight: 4000;
+}
+
+.about-vision-content h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: #701c1c;
+
+  font-size: 68px;
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  margin-bottom: 28px;
+}
+
+.about-vision-content h2 em {
+  color: #701c1c;
+}
+
+.about-vision-content p {
+  color: rgba(66, 64, 64, 0.88);
+
+  font-size: 16px;
+
+  line-height: 2;
+
+  margin-bottom: 20px;
+
+  max-width: 680px;
+}
+
+.about-vision-image {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+}
+
+.about-vision-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .about-hero {
+    padding-left: 6%;
+    padding-right: 6%;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 40px;
+  }
+
+  .about-hero-content {
+    padding-right: 20px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 64px;
+  }
+
+  .about-hero-content p {
+    font-size: 16px;
+  }
+
+  .about-story,
+  .about-why {
+    padding-left: 6%;
+    padding-right: 6%;
+
+    gap: 50px;
+  }
+
+  .about-story-content h2,
+  .about-why-content h2,
+  .about-section-heading h2 {
+    font-size: 54px;
+  }
+
+  .about-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-team-card:last-child {
+    grid-column: 1 / -1;
+
+    max-width: 50%;
+
+    width: 100%;
+
+    margin: auto;
+  }
+
+  .about-awards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-vision {
+    padding-left: 6%;
+    padding-right: 6%;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 40px;
+  }
+
+  .about-vision-content h2 {
+    font-size: 58px;
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .about-hero {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    padding: 130px 7% 70px;
+
+    gap: 45px;
+  }
+
+  .about-hero-content {
+    padding-right: 0;
+
+    max-width: 760px;
+  }
+
+  .about-hero-image {
+    max-width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    margin: 0 auto;
+  }
+
+  .about-story,
+  .about-why {
+    grid-template-columns: 1fr;
+
+    padding: 80px 7%;
+
+    gap: 45px;
+  }
+
+  .about-story-image {
+    order: 2;
+  }
+
+  .about-story-content {
+    order: 1;
+
+    padding-right: 0;
+  }
+
+  .about-story-image img,
+  .about-why-image img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-why-image {
+    order: 2;
+  }
+
+  .about-why-content {
+    order: 1;
+
+    padding-right: 0;
+  }
+
+  .about-journey,
+  .about-team,
+  .about-awards {
+    padding: 80px 7%;
+  }
+
+  .about-section-heading {
+    margin-bottom: 55px;
+  }
+
+  .about-section-heading h2,
+  .about-story-content h2,
+  .about-why-content h2 {
+    font-size: 50px;
+  }
+
+  .about-vision {
+    grid-template-columns: 1fr;
+
+    padding: 80px 7%;
+
+    gap: 45px;
+  }
+
+  .about-vision-content {
+    max-width: 800px;
+  }
+
+  .about-vision-content h2 {
+    font-size: 52px;
+  }
+
+  .about-vision-image {
+    max-width: 800px;
+
+    aspect-ratio: 16 / 10;
+
+    margin: 0 auto;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .about-hero {
+    padding: 110px 6% 60px;
+
+    gap: 35px;
+  }
+
+  .about-hero-content > span,
+  .about-section-heading > span,
+  .about-vision-content > span,
+  .about-kicker {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 48px;
+
+    line-height: 1.05;
+
+    margin-bottom: 22px;
+  }
+
+  .about-hero-content p {
+    font-size: 14px;
+
+    line-height: 1.85;
+  }
+
+  .about-hero-image {
+    aspect-ratio: 4 / 3;
+
+    border-radius: 18px;
+  }
+
+
+  /* STORY */
+
+  .about-story {
+    padding: 65px 6%;
+
+    gap: 35px;
+  }
+
+  .about-story-image {
+    border-radius: 18px;
+  }
+
+  .about-story-image img {
+    aspect-ratio: 4 / 3;
+  }
+
+
+  /* COMMON HEADINGS */
+
+  .about-section-heading {
+    margin-bottom: 40px;
+  }
+
+  .about-section-heading h2,
+  .about-story-content h2,
+  .about-why-content h2 {
+    font-size: 43px;
+
+    line-height: 1.08;
+
+    margin-bottom: 18px;
+  }
+
+  .about-section-heading p {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+
+  /* JOURNEY */
+
+  .about-journey {
+    padding: 65px 6%;
+  }
+
+  .about-timeline {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .about-timeline-item {
+    min-height: auto;
+
+    padding: 28px 24px;
+  }
+
+  .about-year {
+    font-size: 29px;
+
+    margin-bottom: 14px;
+  }
+
+  .about-timeline-content h3 {
+    font-size: 25px;
+  }
+
+  .about-timeline-content p {
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+
+  /* TEAM */
+
+  .about-team {
+    padding: 65px 6%;
+  }
+
+  .about-team-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .about-team-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+  .about-team-image {
+    aspect-ratio: 4 / 4.5;
+  }
+
+  .about-team-info {
+    padding: 24px;
+  }
+
+  .about-team-info h3 {
+    font-size: 27px;
+  }
+
+  .about-team-info p {
+    font-size: 13px;
+  }
+
+
+  /* WHY */
+
+  .about-why {
+    padding: 65px 6%;
+
+    gap: 35px;
+  }
+
+  .about-why-image {
+    border-radius: 18px;
+  }
+
+  .about-why-image img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .about-values {
+    margin-top: 25px;
+  }
+
+  .about-value {
+    gap: 15px;
+
+    padding: 17px 0;
+  }
+
+  .about-value > span {
+    min-width: 28px;
+
+    font-size: 22px;
+  }
+
+  .about-value h3 {
+    font-size: 23px;
+  }
+
+  .about-value p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* AWARDS */
+
+  .about-awards {
+    padding: 65px 6%;
+  }
+
+  .about-awards-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .about-award-card {
+    padding: 32px 25px;
+  }
+
+  .about-award-card strong {
+    font-size: 27px;
+  }
+
+  .about-award-card h3 {
+    font-size: 28px;
+
+    margin: 16px 0 9px;
+  }
+
+  .about-award-card p {
+    font-size: 13px;
+  }
+
+
+  /* VISION */
+
+  .about-vision {
+    padding: 65px 6%;
+
+    gap: 35px;
+  }
+
+  .about-vision-content h2 {
+    font-size: 45px;
+
+    line-height: 1.08;
+
+    margin-bottom: 20px;
+  }
+
+  .about-vision-content p {
+    font-size: 14px;
+
+    line-height: 1.85;
+  }
+
+  .about-vision-image {
+    aspect-ratio: 4 / 3;
+
+    border-radius: 18px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .about-hero {
+    padding: 100px 5% 50px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .about-hero-content p {
+    font-size: 13px;
+  }
+
+  .about-story,
+  .about-journey,
+  .about-team,
+  .about-why,
+  .about-awards,
+  .about-vision {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about-section-heading h2,
+  .about-story-content h2,
+  .about-why-content h2 {
+    font-size: 39px;
+  }
+
+  .about-vision-content h2 {
+    font-size: 40px;
+  }
+
+  .about-team-info {
+    padding: 20px;
+  }
+
+  .about-value {
+    gap: 12px;
+  }
+
+  .about-value h3 {
+    font-size: 21px;
+  }
+}

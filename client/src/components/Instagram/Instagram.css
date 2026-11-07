@@ -1,0 +1,201 @@
+/* ==========================================
+        INSTAGRAM SECTION
+========================================== */
+
+.instagram-section {
+  padding: 90px 8%;
+  background: #ffffff;
+}
+
+.instagram-heading {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.instagram-heading span {
+  display: block;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.instagram-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 62px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.instagram-heading p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+
+/* ==========================================
+        INSTAGRAM GRID
+========================================== */
+
+.instagram-grid {
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.instagram-card {
+  overflow: hidden;
+  background: #f8f3ec;
+  border-radius: 22px;
+}
+
+.instagram-media {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+  background: #f3eee7;
+
+  border-radius: 22px;
+}
+
+.instagram-media img,
+.instagram-media video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.instagram-card:hover .instagram-media img,
+.instagram-card:hover .instagram-media video {
+  transform: scale(1.06);
+}
+
+
+/* ==========================================
+        INSTAGRAM OVERLAY
+========================================== */
+
+.instagram-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(95, 36, 27, 0.45);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.instagram-card:hover .instagram-overlay {
+  opacity: 1;
+}
+
+.instagram-overlay i {
+  color: #ffffff;
+  font-size: 34px;
+}
+
+
+/* ==========================================
+        CAPTION
+========================================== */
+
+.instagram-caption {
+  padding: 15px 16px;
+
+  color: #666;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+        LOADING / EMPTY
+========================================== */
+
+.instagram-message {
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: 45px 20px;
+
+  text-align: center;
+
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* ==========================================
+        TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+  .instagram-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .instagram-section {
+    padding: 70px 6%;
+  }
+
+  .instagram-heading {
+    margin-bottom: 45px;
+  }
+
+  .instagram-heading h2 {
+    font-size: 50px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .instagram-caption {
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-heading h2 {
+    font-size: 42px;
+  }
+
+  .instagram-heading p {
+    font-size: 14px;
+  }
+
+  .instagram-grid {
+    grid-template-columns: 1fr;
+  }
+}

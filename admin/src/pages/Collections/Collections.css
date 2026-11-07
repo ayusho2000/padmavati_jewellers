@@ -1,0 +1,311 @@
+
+.collections-admin-page {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  color: #241714;
+}
+
+.collections-admin-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.collections-admin-eyebrow {
+  color: #b88b2f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.collections-admin-heading h2 {
+  margin: 8px 0;
+  color: #5f241b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 38px;
+}
+
+.collections-admin-heading p {
+  margin: 0;
+  color: #77706c;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.collections-admin-loading,
+.collections-admin-empty {
+  padding: 32px;
+  border: 1px solid #e9e1da;
+  border-radius: 12px;
+  background: #fff;
+  color: #6f625c;
+  text-align: center;
+}
+
+.collections-admin-list {
+  display: grid;
+  gap: 24px;
+}
+
+.collections-admin-card {
+  overflow: hidden;
+  border: 1px solid #e9e1da;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 22px rgba(36, 23, 20, 0.035);
+}
+
+.collections-admin-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 25px;
+  border-bottom: 1px solid #eee8e3;
+}
+
+.collections-admin-category {
+  color: #b88b2f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.collections-admin-card-header h3 {
+  margin: 5px 0 0;
+  color: #5f241b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+}
+
+.collections-admin-status {
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.collections-admin-status.is-active {
+  background: #eaf5ed;
+  color: #28633a;
+}
+
+.collections-admin-status.is-inactive {
+  background: #f7ece8;
+  color: #8b3b2b;
+}
+
+.collections-admin-editor {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.85fr) minmax(0, 1.15fr);
+  gap: 28px;
+  padding: 25px;
+}
+
+.collections-admin-image-column {
+  min-width: 0;
+}
+
+.collections-admin-image-preview {
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #eee6df;
+  border-radius: 10px;
+  background: #f8f3ec;
+}
+
+.collections-admin-image-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.collections-admin-file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 1px solid #7a3226;
+  border-radius: 7px;
+  color: #7a3226;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.collections-admin-file-label:hover {
+  background: #faf4f0;
+}
+
+.collections-admin-file-label input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.collections-admin-image-column small {
+  display: block;
+  margin-top: 8px;
+  color: #837873;
+  font-size: 11px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.collections-admin-image-column .collections-admin-selected-file {
+  color: #28633a;
+}
+
+.collections-admin-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  min-width: 0;
+}
+
+.collections-admin-fields > label:not(.collections-admin-active-toggle) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #443631;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.collections-admin-fields input[type="text"],
+.collections-admin-fields textarea {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #ded5ce;
+  border-radius: 7px;
+  outline: none;
+  background: #fff;
+  color: #302622;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collections-admin-fields textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.collections-admin-fields input[type="text"]:focus,
+.collections-admin-fields textarea:focus {
+  border-color: #b88b2f;
+  box-shadow: 0 0 0 3px rgba(184, 139, 47, 0.12);
+}
+
+.collections-admin-active-toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #655852;
+  font-size: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.collections-admin-active-toggle input {
+  margin-top: 2px;
+  accent-color: #7a3226;
+}
+
+.collections-admin-save {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 12px 22px;
+  border: 1px solid #7a3226;
+  border-radius: 7px;
+  background: #7a3226;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.collections-admin-save:hover:not(:disabled) {
+  background: #5f241b;
+}
+
+.collections-admin-save:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.collections-admin-notice {
+  margin-bottom: 20px;
+  padding: 13px 16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.collections-admin-notice-success {
+  border-color: #cce5d2;
+  background: #eff8f1;
+  color: #28633a;
+}
+
+.collections-admin-notice-error {
+  border-color: #eed1ca;
+  background: #fff4f1;
+  color: #8b3022;
+}
+
+.collections-admin-notice button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .collections-admin-editor {
+    grid-template-columns: 1fr;
+  }
+
+  .collections-admin-image-preview {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 600px) {
+  .collections-admin-heading h2 {
+    font-size: 32px;
+  }
+
+  .collections-admin-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .collections-admin-editor {
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .collections-admin-save {
+    width: 100%;
+  }
+}

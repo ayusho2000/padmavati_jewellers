@@ -1,0 +1,93 @@
+/*=================================
+        FLOATING BUTTONS
+=================================*/
+
+.floating-buttons {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  z-index: 1000;
+}
+
+.floating-btn {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  font-size: 24px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+
+  transition: 0.35s;
+
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.floating-call {
+  background: #7a3226;
+}
+
+.floating-call:hover {
+  background: #5f241b;
+}
+
+.floating-whatsapp {
+  background: #25d366;
+}
+
+.floating-whatsapp:hover {
+  background: #1ebe5d;
+}
+
+
+/*=================================
+        RESPONSIVE
+=================================*/
+
+@media (max-width: 768px) {
+
+  .floating-buttons {
+    right: 18px;
+    bottom: 18px;
+    gap: 12px;
+  }
+
+  .floating-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 21px;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .floating-buttons {
+    right: 15px;
+    bottom: 15px;
+    gap: 10px;
+  }
+
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 19px;
+  }
+}

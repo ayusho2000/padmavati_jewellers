@@ -1,0 +1,807 @@
+/* =========================================================
+   INSTAGRAM PAGE
+========================================================= */
+
+.instagram-page {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.instagram-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.instagram-page-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #999;
+}
+
+.instagram-page-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #171717;
+}
+
+.instagram-page-header p {
+  margin: 8px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.instagram-add-button {
+  border: 0;
+  background: #171717;
+  color: #fff;
+  padding: 13px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.instagram-add-button:hover {
+  background: #333;
+}
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.instagram-success-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: #edf9f1;
+  color: #248448;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.instagram-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.instagram-count {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.instagram-count strong {
+  font-size: 24px;
+  color: #171717;
+}
+
+.instagram-count span {
+  font-size: 13px;
+  color: #777;
+}
+
+.instagram-refresh-button {
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #444;
+  padding: 9px 14px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.instagram-refresh-button:hover {
+  background: #f7f7f7;
+}
+
+.instagram-refresh-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.instagram-loading {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+.instagram-loading svg {
+  font-size: 22px;
+}
+
+.instagram-loading p {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.instagram-empty {
+  min-height: 360px;
+  border: 1px dashed #d7d7d7;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #fff;
+}
+
+.instagram-empty-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram-empty-instagram-icon {
+  font-size: 42px;
+  line-height: 1;
+  color: #555;
+}
+
+.instagram-empty h3 {
+  margin: 20px 0 8px;
+  font-size: 18px;
+  color: #222;
+}
+
+.instagram-empty p {
+  margin: 0 0 20px;
+  color: #888;
+  font-size: 13px;
+}
+
+.instagram-empty button {
+  border: 0;
+  background: #171717;
+  color: #fff;
+  padding: 11px 17px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.instagram-card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+.instagram-card:hover {
+  border-color: #d5d5d5;
+  transform: translateY(-2px);
+}
+
+.instagram-card-inactive {
+  opacity: 0.62;
+}
+
+/* =========================================================
+   MEDIA
+========================================================= */
+
+.instagram-media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+
+.instagram-card-media {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.instagram-media-type {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 6px 9px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.instagram-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 9px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.status-active {
+  background: rgba(237, 249, 241, 0.95);
+  color: #248448;
+}
+
+.status-inactive {
+  background: rgba(255, 240, 240, 0.95);
+  color: #b43b3b;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.instagram-card-content {
+  padding: 15px;
+}
+
+.instagram-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.instagram-card-top > span {
+  font-size: 11px;
+  font-weight: 700;
+  color: #888;
+}
+
+.instagram-link {
+  color: #555;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.instagram-link:hover {
+  color: #111;
+}
+
+.instagram-caption {
+  margin: 10px 0 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.instagram-card-actions {
+  display: grid;
+  grid-template-columns:
+    1fr 1.25fr 1fr;
+  gap: 7px;
+  padding: 0 15px 15px;
+}
+
+.instagram-card-actions button {
+  min-height: 34px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.instagram-card-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.instagram-edit-button {
+  color: #444;
+}
+
+.instagram-edit-button:hover {
+  background: #f5f5f5;
+}
+
+.instagram-toggle-button {
+  color: #777;
+}
+
+.instagram-toggle-button:hover {
+  background: #f5f5f5;
+}
+
+.instagram-delete-button {
+  color: #b43b3b;
+}
+
+.instagram-delete-button:hover {
+  background: #fff3f3;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.instagram-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.instagram-modal {
+  width: 100%;
+  max-width: 620px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-modal-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 22px 24px;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.instagram-modal-header span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #999;
+}
+
+.instagram-modal-header h2 {
+  margin: 6px 0 0;
+  font-size: 22px;
+  color: #222;
+}
+
+.instagram-modal-close {
+  border: 0;
+  background: transparent;
+  color: #888;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.instagram-modal-close:hover {
+  color: #222;
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.instagram-form {
+  padding: 24px;
+}
+
+.instagram-form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.instagram-form-group label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+}
+
+.instagram-form-group label > span {
+  color: #b43b3b;
+}
+
+.instagram-form-group label small {
+  margin-left: 3px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #999;
+}
+
+.instagram-form-group input,
+.instagram-form-group select,
+.instagram-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  background: #fff;
+  color: #222;
+  font-family: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.instagram-form-group input,
+.instagram-form-group select {
+  height: 43px;
+  padding: 0 12px;
+}
+
+.instagram-form-group textarea {
+  padding: 11px 12px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.instagram-form-group input:focus,
+.instagram-form-group select:focus,
+.instagram-form-group textarea:focus {
+  border-color: #777;
+}
+
+.instagram-form-group input[type="file"] {
+  height: auto;
+  padding: 10px;
+}
+
+.instagram-form-group small {
+  display: block;
+  margin-top: 6px;
+  color: #999;
+  font-size: 10px;
+}
+
+.instagram-character-count {
+  margin-top: 5px;
+  text-align: right;
+  color: #999;
+  font-size: 10px;
+}
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+.instagram-preview {
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.instagram-preview > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #888;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.instagram-preview img,
+.instagram-preview video {
+  width: 100%;
+  max-height: 260px;
+  display: block;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #eee;
+}
+
+/* =========================================================
+   ACTIVE TOGGLE
+========================================================= */
+
+.instagram-active-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.instagram-active-toggle input {
+  display: none;
+}
+
+.instagram-toggle-slider {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  border-radius: 20px;
+  background: #ccc;
+  transition: 0.2s ease;
+}
+
+.instagram-toggle-slider::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+.instagram-active-toggle input:checked
+  + .instagram-toggle-slider {
+  background: #333;
+}
+
+.instagram-active-toggle input:checked
+  + .instagram-toggle-slider::after {
+  transform: translateX(18px);
+}
+
+.instagram-toggle-text {
+  font-size: 12px;
+  color: #555;
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.instagram-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid #eee;
+}
+
+.instagram-form-actions button {
+  min-width: 120px;
+  height: 42px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.instagram-cancel-button {
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #555;
+}
+
+.instagram-save-button {
+  border: 0;
+  background: #171717;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.instagram-save-button:hover {
+  background: #333;
+}
+
+.instagram-form-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* =========================================================
+   ERROR POPUP
+========================================================= */
+
+.instagram-error-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.instagram-error-popup {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 13px;
+  background: #fff;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.instagram-error-close {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  border: 0;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+}
+
+.instagram-error-icon {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #fff1f1;
+  color: #bd3c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.instagram-error-content h3 {
+  margin: 0 0 8px;
+  color: #222;
+  font-size: 18px;
+}
+
+.instagram-error-content p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.instagram-error-ok {
+  margin-top: 22px;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 7px;
+  background: #171717;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.instagram-spin {
+  animation: instagramSpin 1s linear infinite;
+}
+
+@keyframes instagramSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+  .instagram-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .instagram-page {
+    padding: 20px;
+  }
+
+  .instagram-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .instagram-add-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .instagram-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-card-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-modal-overlay {
+    padding: 10px;
+  }
+
+  .instagram-modal-header,
+  .instagram-form {
+    padding: 18px;
+  }
+}

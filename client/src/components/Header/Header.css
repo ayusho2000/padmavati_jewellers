@@ -1,0 +1,997 @@
+/* =========================================================
+   PADMAVATI JEWELLERS
+   HEADER
+========================================================= */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 18px 7%;
+
+  z-index: 999;
+
+  transition:
+    transform 0.45s ease,
+    background 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+.site-header.header-visible {
+  transform: translateY(0);
+}
+
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
+}
+
+
+/* =========================================================
+   SCROLLED HEADER
+========================================================= */
+
+.site-header.scrolled {
+  background: #f5f4ee;
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+.header-inner {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  min-height: 70px;
+}
+
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.header-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 3px;
+
+  width: 33.33%;
+}
+
+
+.header-icon {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.header-icon:hover {
+  color: #d4af37;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SCROLLED ICON COLOR
+========================================================= */
+
+.site-header.scrolled .header-icon {
+  color: #262626;
+}
+
+
+.site-header.scrolled .header-icon:hover {
+  color: #d4af37;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.header-logo {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 2;
+}
+
+
+.header-logo img {
+  display: block;
+
+  width: auto;
+
+  height: 70px;
+
+  max-width: 220px;
+
+  object-fit: contain;
+
+  transition:
+    filter 0.45s ease,
+    transform 0.3s ease;
+}
+
+
+.header-logo:hover img {
+  transform: scale(1.03);
+}
+
+
+.site-header.scrolled .header-logo img {
+  filter: brightness(0);
+}
+
+
+/* =========================================================
+   RIGHT ACTIONS
+========================================================= */
+
+.header-actions {
+  width: 33.33%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 20px;
+
+  position: relative;
+}
+
+
+.header-button {
+  padding: 0;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.main-nav {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 42px;
+
+  margin-top: 10px;
+}
+
+
+.nav-link {
+  position: relative;
+
+  display: inline-block;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  letter-spacing: 1.4px;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 100%;
+  height: 1px;
+
+  background: #d4af37;
+
+  transform: scaleX(0);
+
+  transform-origin: right;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.nav-link:hover {
+  color: #d4af37;
+}
+
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+
+  transform-origin: left;
+}
+
+
+/* =========================================================
+   SCROLLED NAVIGATION
+========================================================= */
+
+.site-header.scrolled .nav-link {
+  color: #262626;
+}
+
+
+.site-header.scrolled .nav-link:hover {
+  color: #d4af37;
+}
+
+
+/* =========================================================
+   HEADER SEARCH BAR
+========================================================= */
+
+.header-search {
+  width: 430px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 8px 0 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  background: rgba(0, 0, 0, 0.08);
+
+  border-radius: 30px;
+
+  animation: headerSearchOpen 0.35s ease forwards;
+}
+
+
+@keyframes headerSearchOpen {
+
+  from {
+    width: 34px;
+    opacity: 0.6;
+  }
+
+  to {
+    width: 430px;
+    opacity: 1;
+  }
+
+}
+
+
+.header-search-icon {
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  font-size: 14px;
+}
+
+
+.header-search input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 13px;
+
+  letter-spacing: 0.5px;
+}
+
+
+.header-search input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+.header-search-clear,
+.header-search-close {
+  flex-shrink: 0;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.header-search-clear:hover,
+.header-search-close:hover {
+  color: #d4af37;
+
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   SEARCH BAR ON SCROLLED HEADER
+========================================================= */
+
+.site-header.scrolled .header-search {
+  border-color: rgba(38, 38, 38, 0.3);
+
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+.site-header.scrolled .header-search-icon {
+  color: #262626;
+}
+
+
+.site-header.scrolled .header-search input {
+  color: #262626;
+}
+
+
+.site-header.scrolled .header-search input::placeholder {
+  color: #777777;
+}
+
+
+.site-header.scrolled .header-search-clear,
+.site-header.scrolled .header-search-close {
+  color: #262626;
+}
+
+
+.site-header.scrolled .header-search-clear:hover,
+.site-header.scrolled .header-search-close:hover {
+  color: #d4af37;
+}
+
+
+/* =========================================================
+   SEARCH RESULTS DROPDOWN
+========================================================= */
+
+.header-search-results {
+  position: absolute;
+
+  top: 100%;
+
+  right: 7%;
+
+  width: 430px;
+
+  max-height: 430px;
+
+  overflow-y: auto;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  border-radius: 0 0 18px 18px;
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.18);
+
+  z-index: 20;
+}
+
+
+.header-search-result-heading {
+  color: #999999;
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+
+.header-search-result-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.header-search-result {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 8px;
+
+  border-radius: 12px;
+
+  background: #f8f3ec;
+
+  color: inherit;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.header-search-result:hover {
+  background: #f1e6da;
+
+  transform: translateX(4px);
+}
+
+
+.header-search-result-image {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+}
+
+
+.header-search-result-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.header-search-no-image {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #b88b2f;
+
+  font-size: 18px;
+}
+
+
+.header-search-result-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.header-search-result-content span {
+  display: block;
+
+  color: #b88b2f;
+
+  font-size: 8px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 4px;
+}
+
+
+.header-search-result-content h3 {
+  color: #7a3226;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.header-search-result-arrow {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #7a3226;
+
+  font-size: 11px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.header-search-result:hover .header-search-result-arrow {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SEARCH MESSAGE
+========================================================= */
+
+.header-search-message {
+  min-height: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  text-align: center;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+
+.header-search-message > i {
+  color: #b88b2f;
+
+  font-size: 17px;
+}
+
+
+.header-search-error {
+  color: #8b2f2f;
+}
+
+
+.header-search-error i {
+  color: #8b2f2f;
+}
+
+
+.header-search-loader {
+  width: 22px;
+  height: 22px;
+
+  border: 2px solid #eadfd4;
+
+  border-top-color: #7a3226;
+
+  border-radius: 50%;
+
+  animation:
+    headerSearchLoader 0.8s linear infinite;
+}
+
+
+@keyframes headerSearchLoader {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================================
+   PRODUCT PAGE HEADER
+========================================================= */
+
+.site-header.product-header {
+  background: transparent !important;
+
+  box-shadow: none !important;
+
+  border-bottom: none !important;
+}
+
+
+/* =========================================================
+   GOLD PRODUCT HEADER
+========================================================= */
+
+.site-header.product-header-gold {
+  background-image: url("/images/gold-banner.jpg");
+
+  background-size: cover;
+
+  background-position: center top;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   DIAMOND PRODUCT HEADER
+========================================================= */
+
+.site-header.product-header-diamond {
+  background-image: url("/images/diamond-banner.jpg");
+
+  background-size: cover;
+
+  background-position: center top;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   POLKI PRODUCT HEADER
+========================================================= */
+
+.site-header.product-header-polki {
+  background-image: url("/images/polki-banner.jpg");
+
+  background-size: cover;
+
+  background-position: center top;
+
+  background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   KEEP PRODUCT BANNER WHEN SCROLLING
+========================================================= */
+
+.site-header.product-header.scrolled {
+  background-color: transparent !important;
+
+  box-shadow: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .site-header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+
+  .main-nav {
+    gap: 25px;
+  }
+
+
+  .nav-link {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+  }
+
+
+  .header-socials,
+  .header-actions {
+    width: 30%;
+  }
+
+
+  .header-search {
+    width: 330px;
+  }
+
+
+  @keyframes headerSearchOpen {
+
+    from {
+      width: 34px;
+    }
+
+    to {
+      width: 330px;
+    }
+
+  }
+
+
+  .header-search-results {
+    right: 5%;
+
+    width: 330px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    padding: 14px 5%;
+  }
+
+
+  .header-inner {
+    min-height: 60px;
+  }
+
+
+  .header-logo img {
+    height: 58px;
+
+    max-width: 180px;
+  }
+
+
+  .header-socials {
+    gap: 8px;
+  }
+
+
+  .header-actions {
+    gap: 8px;
+  }
+
+
+  .header-icon {
+    width: 30px;
+
+    height: 30px;
+
+    font-size: 14px;
+  }
+
+
+  .main-nav {
+    display: none;
+  }
+
+
+  .header-search {
+    width: 280px;
+
+    height: 40px;
+  }
+
+
+  @keyframes headerSearchOpen {
+
+    from {
+      width: 34px;
+    }
+
+    to {
+      width: 280px;
+    }
+
+  }
+
+
+  .header-search-results {
+    top: 100%;
+
+    right: 5%;
+
+    width: 280px;
+
+    max-height: 360px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .site-header {
+    padding-left: 4%;
+
+    padding-right: 4%;
+  }
+
+
+  .header-logo img {
+    height: 52px;
+
+    max-width: 155px;
+  }
+
+
+  .header-socials,
+  .header-actions {
+    width: auto;
+  }
+
+
+  .header-socials {
+    gap: 3px;
+  }
+
+
+  .header-actions {
+    gap: 3px;
+  }
+
+
+  .header-icon {
+    width: 28px;
+
+    height: 28px;
+
+    font-size: 13px;
+  }
+
+
+  .header-search {
+    width: 210px;
+
+    height: 38px;
+
+    padding-left: 10px;
+
+    gap: 5px;
+  }
+
+
+  @keyframes headerSearchOpen {
+
+    from {
+      width: 28px;
+    }
+
+    to {
+      width: 210px;
+    }
+
+  }
+
+
+  .header-search input {
+    font-size: 11px;
+  }
+
+
+  .header-search-results {
+    right: 4%;
+
+    width: 210px;
+
+    padding: 12px;
+  }
+
+
+  .header-search-result-image {
+    width: 48px;
+
+    height: 48px;
+  }
+
+
+  .header-search-result-content h3 {
+    font-size: 18px;
+  }
+
+}

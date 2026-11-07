@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+.admin-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #f5f5f5;
+  color: #111;
+  text-align: center;
+}
+
+.admin-app h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.admin-app p {
+  margin: 12px 0 30px;
+  font-size: 20px;
+  color: #666;
+}
+
+.admin-status {
+  padding: 16px 24px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 15px;
+  color: #333;
+}

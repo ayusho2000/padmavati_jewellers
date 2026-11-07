@@ -1,0 +1,237 @@
+/* ==========================================
+        TESTIMONIALS SECTION
+========================================== */
+
+.testimonials {
+  padding: 90px 8%;
+  background: #ffffff;
+}
+
+.testimonials-heading {
+  max-width: 850px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.testimonials-heading span {
+  display: block;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.testimonials-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 62px;
+  font-weight: 600;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.testimonials-heading p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+
+/* ==========================================
+        TESTIMONIAL GRID
+========================================== */
+
+.testimonials-grid {
+  max-width: 1500px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+
+/* ==========================================
+        TESTIMONIAL CARD
+========================================== */
+
+.testimonial-card {
+  padding: 38px 32px;
+  background: #f8f3ec;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 300px;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==========================================
+        STARS
+========================================== */
+
+.testimonial-stars {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 25px;
+}
+
+.star {
+  color: #d7d0c7;
+  font-size: 18px;
+}
+
+.star.active {
+  color: var(--gold);
+}
+
+
+/* ==========================================
+        TESTIMONIAL TEXT
+========================================== */
+
+.testimonial-text {
+  color: #555;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  line-height: 1.55;
+
+  margin-bottom: 30px;
+
+  flex: 1;
+}
+
+
+/* ==========================================
+        AUTHOR
+========================================== */
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding-top: 20px;
+  border-top: 1px solid rgba(95, 36, 27, 0.12);
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+  color: #ffffff;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.testimonial-author h3 {
+  color: var(--primary);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 23px;
+  font-weight: 600;
+
+  margin-bottom: 2px;
+}
+
+.testimonial-author span {
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* ==========================================
+        LOADING / EMPTY
+========================================== */
+
+.testimonials-loading,
+.testimonials-empty {
+  max-width: 900px;
+  margin: 0 auto;
+
+  padding: 45px 20px;
+
+  text-align: center;
+
+  color: #777;
+  font-size: 16px;
+}
+
+
+/* ==========================================
+        TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ==========================================
+        MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding: 70px 6%;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 45px;
+  }
+
+  .testimonials-heading h2 {
+    font-size: 50px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .testimonial-card {
+    padding: 32px 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonials-heading h2 {
+    font-size: 42px;
+  }
+
+  .testimonials-heading p {
+    font-size: 14px;
+  }
+
+  .testimonial-text {
+    font-size: 20px;
+  }
+}

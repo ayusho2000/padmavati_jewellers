@@ -1,0 +1,97 @@
+/* =========================================================
+   PADMAVATI JEWELLERS
+   GLOBAL STYLES
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap");
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  background: #ffffff;
+
+  color: #262626;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+
+img,
+video {
+  display: block;
+
+  max-width: 100%;
+}
+
+
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+button {
+  border: none;
+
+  outline: none;
+}
+
+
+ul,
+ol {
+  list-style: none;
+}
+
+
+#root {
+  width: 100%;
+}
+
+
+/* =========================================================
+   DESIGN VARIABLES
+========================================================= */
+
+:root {
+  --primary: #7a3226;
+  --primary-dark: #5f241b;
+
+  --gold: #d4af37;
+
+  --white: #ffffff;
+
+  --light: #faf7f4;
+
+  --text: #262626;
+}

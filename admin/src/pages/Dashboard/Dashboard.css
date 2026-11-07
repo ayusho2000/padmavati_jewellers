@@ -1,0 +1,123 @@
+.dashboard-home {
+  width: 100%;
+}
+
+.dashboard-welcome {
+  margin-bottom: 30px;
+}
+
+.dashboard-welcome-label {
+  color: #7a3226;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.dashboard-welcome h2 {
+  margin: 8px 0 8px;
+
+  color: #241714;
+
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.dashboard-welcome p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #817875;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ==========================================
+          DASHBOARD CARDS
+========================================== */
+
+.dashboard-placeholder-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.dashboard-placeholder-card {
+  min-height: 180px;
+
+  padding: 25px;
+
+  border: 1px solid #e8e2dd;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.dashboard-placeholder-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(36, 23, 20, 0.08);
+}
+
+.dashboard-placeholder-card span {
+  color: #d4af37;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.dashboard-placeholder-card h3 {
+  margin: 14px 0 8px;
+
+  color: #241714;
+
+  font-size: 18px;
+}
+
+.dashboard-placeholder-card p {
+  margin: 0;
+
+  color: #817875;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+@media (max-width: 1000px) {
+
+  .dashboard-placeholder-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .dashboard-welcome h2 {
+    font-size: 26px;
+  }
+
+  .dashboard-placeholder-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

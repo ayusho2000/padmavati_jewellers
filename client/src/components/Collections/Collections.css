@@ -1,0 +1,404 @@
+/*=====================================
+        COLLECTION HEADING
+======================================*/
+
+.collection-heading {
+  text-align: center;
+  padding: 90px 20px 60px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.collection-heading span {
+  display: block;
+  color: #c79a3b;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+.collection-heading h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 64px;
+  color: #5f241b;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.collection-heading p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #666;
+  max-width: 720px;
+  margin: auto;
+}
+
+
+/*=====================================
+        COLLECTIONS
+======================================*/
+
+.collections {
+  padding: 90px 8%;
+  background: #f8f3ec;
+}
+
+
+/*=====================================
+        COLLECTION ROW
+======================================*/
+
+.collection-row {
+  display: grid;
+  grid-template-columns: minmax(0, 45%) minmax(0, 55%);
+  align-items: center;
+  gap: 60px;
+  max-width: 1500px;
+  margin: 0 auto 100px;
+}
+
+.collection-row:last-child {
+  margin-bottom: 0;
+}
+
+.collection-row.reverse {
+  grid-template-columns: minmax(0, 55%) minmax(0, 45%);
+}
+
+
+/*=====================================
+        REVERSE ROW
+======================================*/
+
+.collection-row.reverse .collection-image {
+  order: 2;
+}
+
+.collection-row.reverse .collection-content {
+  order: 1;
+}
+
+
+/*=====================================
+        COLLECTION IMAGE
+======================================*/
+
+.collection-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.collection-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.7s ease;
+}
+
+.collection-image:hover img {
+  transform: scale(1.04);
+}
+
+
+/*=====================================
+        COLLECTION CONTENT
+======================================*/
+
+.collection-content {
+  padding: 20px;
+}
+
+.collection-subtitle {
+  display: block;
+  color: #b88b2f;
+  letter-spacing: 4px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.collection-content h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 58px;
+  font-weight: 600;
+  color: #5f241b;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.collection-content p {
+  color: #666;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+
+/*=====================================
+        COLLECTION BUTTON
+======================================*/
+
+.collection-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  border: 1px solid #5f241b;
+  color: #5f241b;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.4s;
+}
+
+.collection-btn:hover {
+  background: #5f241b;
+  color: #fff;
+}
+
+
+/*=====================================
+        TABLET
+======================================*/
+
+@media (max-width: 1100px) {
+
+  .collections {
+    padding: 75px 6%;
+  }
+
+  .collection-row,
+  .collection-row.reverse {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  .collection-content {
+    padding: 10px;
+  }
+
+  .collection-content h2 {
+    font-size: 48px;
+  }
+
+  .collection-content p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+}
+
+
+/*=====================================
+        TABLET / SMALL LAPTOP
+======================================*/
+
+@media (max-width: 900px) {
+
+  .collection-row,
+  .collection-row.reverse {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-bottom: 75px;
+  }
+
+  /*
+    Keep image in its natural proportion.
+    Do NOT give it a fixed height.
+  */
+  .collection-image {
+    width: 100%;
+  }
+
+  .collection-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .collection-row.reverse .collection-image,
+  .collection-row.reverse .collection-content {
+    order: unset;
+  }
+
+  .collection-content {
+    padding: 0;
+  }
+
+  .collection-content h2 {
+    font-size: 46px;
+  }
+
+}
+
+
+/*=====================================
+        MOBILE
+======================================*/
+
+@media (max-width: 768px) {
+
+  .collection-heading {
+    padding: 65px 20px 45px;
+  }
+
+  .collection-heading span {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+  }
+
+  .collection-heading h2 {
+    font-size: 48px;
+  }
+
+  .collection-heading p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .collections {
+    padding: 60px 6%;
+  }
+
+  .collection-row,
+  .collection-row.reverse {
+    gap: 28px;
+    margin-bottom: 65px;
+  }
+
+  .collection-image {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .collection-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .collection-content {
+    padding: 0;
+  }
+
+  .collection-subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+  }
+
+  .collection-content h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .collection-content p {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 30px;
+  }
+
+  .collection-btn {
+    padding: 13px 28px;
+    font-size: 11px;
+  }
+
+}
+
+
+/*=====================================
+        SMALL MOBILE
+======================================*/
+
+@media (max-width: 480px) {
+
+  .collection-heading {
+    padding: 55px 18px 40px;
+  }
+
+  .collection-heading span {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .collection-heading h2 {
+    font-size: 40px;
+  }
+
+  .collection-heading p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .collections {
+    padding: 50px 5%;
+  }
+
+  .collection-row,
+  .collection-row.reverse {
+    gap: 25px;
+    margin-bottom: 60px;
+  }
+
+  .collection-image {
+    width: 100%;
+  }
+
+  .collection-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .collection-content h2 {
+    font-size: 37px;
+  }
+
+  .collection-content p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+
+  .collection-btn {
+    padding: 12px 23px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+}
+
+
+/*=====================================
+        VERY SMALL MOBILE
+======================================*/
+
+@media (max-width: 375px) {
+
+  .collection-heading h2 {
+    font-size: 36px;
+  }
+
+  .collection-heading p {
+    font-size: 13px;
+  }
+
+  .collections {
+    padding: 45px 5%;
+  }
+
+  .collection-row,
+  .collection-row.reverse {
+    gap: 22px;
+    margin-bottom: 55px;
+  }
+
+  .collection-content h2 {
+    font-size: 34px;
+  }
+
+  .collection-content p {
+    font-size: 13px;
+  }
+
+}
